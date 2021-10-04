@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node new-app.js"  
+    "start": "node new-app.js"
   },
   "author": "Antonio Govea",
   "license": "MIT",
