@@ -12,21 +12,21 @@ const hbs = require('hbs');
 const port = process.env.PORT  | 4000 ;
 
 //ASIGNANDO LA CARPETA PUBLICA DE MANERA ESTATICA
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 
 //RUTAS DE SERVIDOR
 
-app.get("/Home", (req, res) => {
+app.get('/', function (req, res) {
 	res.sendFile(__dirname + "/public/index.html");
-	res.s;
+	
 	res.send("Respuesta de ruta Home");
 	console.log("Ruta Home ");
 });
 
 
 //Ruta por default
-app.get("*", (req, res) => {
+app.get('*', (req, res) => {
 	res.sendFile(__dirname + "/public/404.html");
 	console.log("Ruta no encontrada");
 });
