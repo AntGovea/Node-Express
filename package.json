@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node new-app.js"
+    "start": "node app.js"
   },
   "author": "Antonio Govea",
   "license": "MIT",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "hbs": "^4.1.2"
+    "dotenv": "^10.0.0"
   }
 }

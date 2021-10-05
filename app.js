@@ -1,40 +1,21 @@
-//CONFIGURACION DEL SISTEMA E IMPORTACIONES NEESARIAS
-//AUTOR:JOSE ANTONIO GOVEA MILLAN 
-//DESCRIPCION:CONFIGURACION BASICA DE SERVIDOR CON NODE Y EXPRESS 
-
+// configuracione de l sistema en el archivo  :D
 require("dotenv").config();
+const Server = require("./models/server");
 //IMPORTACION DE LIBRERIA DE EXPRESS
-const express = require("express");
-const app = express();
-//IMPORTACION DE HANDLEBEARS
-const hbs = require('hbs');
-//ASIGNACION DE PUERTO
-const port = process.env.PORT  | 4000 ;
 
-//ASIGNANDO LA CARPETA PUBLICA DE MANERA ESTATICA
-app.use(express.static('public'));
+// RUTAS DE SERVIDOR
+// app.get('/', function (req, res) {
+// 	res.sendFile(__dirname + "/public/index.html");
+// 	res.send("Respuesta de ruta Home");
+// 	console.log("Ruta Home ");
+// });
+const server = new Server();
 
-
-//RUTAS DE SERVIDOR
-
-app.get('/', function (req, res) {
-	res.sendFile(__dirname + "/public/index.html");
-	
-	res.send("Respuesta de ruta Home");
-	console.log("Ruta Home ");
-});
-
+server.listen();
 
 //Ruta por default
-app.get('*', (req, res) => {
-	// res.sendFile(__dirname + "/public/404.html");
-	// console.log("Ruta no encontrada");
-	res.sendFile(__dirname + "/public/index.html");
-	
-	res.send("Respuesta de ruta Home");
-	console.log("Ruta Home ");
-});
-
-//Informacion de Puerto
-app.listen(port);
-console.log("Servidor corriendo en puerto " + port); 
+// app.get('*', (req, res) => {
+// 	res.sendFile(__dirname + "/public/index.html");
+// 	res.send("Respuesta de ruta Home");
+// 	console.log("Ruta Home");
+// });
