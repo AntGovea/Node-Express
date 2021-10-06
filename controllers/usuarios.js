@@ -7,9 +7,11 @@ const usuariosGET = (req, res = response) => {
 };
 
 const usuariosPUT = (req, res = response) => {
-	
+	// const {nombre='naruto' ,apellido='uzumaki' ,aldea='konoha'}=req.body;
 	res.json({
-		msg: "put Api",
+		nombre,
+		apellido,
+		aldea
 	});
 };
 
@@ -23,6 +25,8 @@ const usuariosPOST = (req, res = response) => {
 };
 
 const usuariosPATCH = (req, res = response) => {
+
+	
 	res.json({
 		msg: "patch Api",
 	});
